@@ -32,20 +32,75 @@ public class Employee {
 	}
 	private List<Child> children;
 
-	public Employee(String employeeId, String firstName, String lastName, String idNumber, String address, int yearJoined, int monthJoined, int dayJoined, boolean isForeigner, boolean gender) {
-		this.employeeId = employeeId;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.idNumber = idNumber;
-		this.address = address;
-		this.yearJoined = yearJoined;
-		this.monthJoined = monthJoined;
-		this.dayJoined = dayJoined;
-		this.isForeigner = isForeigner;
-		this.gender = gender;
-		
-		children = new LinkedList<>();
-	}
+	public Employee() {
+        childNames = new LinkedList<>();
+        childIdNumbers = new LinkedList<>();
+    }
+
+    public Employee employeeId(String employeeId) {
+        this.employeeId = employeeId;
+        return this;
+    }
+
+    public Employee firstName(String firstName) {
+        this.firstName = firstName;
+        return this;
+    }
+
+    public Employee lastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+
+    public Employee idNumber(String idNumber) {
+        this.idNumber = idNumber;
+        return this;
+    }
+
+    public Employee address(String address) {
+        this.address = address;
+        return this;
+    }
+
+    public Employee dateJoined(LocalDate dateJoined) {
+        this.dateJoined = dateJoined;
+        return this;
+    }
+
+    public Employee isForeigner(boolean isForeigner) {
+        this.isForeigner = isForeigner;
+        return this;
+    }
+
+    public Employee gender(boolean gender) {
+        this.gender = gender;
+        return this;
+    }
+
+    public Employee monthlySalary(int monthlySalary) {
+        this.monthlySalary = monthlySalary;
+        return this;
+    }
+
+    public Employee otherMonthlyIncome(int otherMonthlyIncome) {
+        this.otherMonthlyIncome = otherMonthlyIncome;
+        return this;
+    }
+
+    public Employee annualDeductible(int annualDeductible) {
+        this.annualDeductible = annualDeductible;
+        return this;
+    }
+
+    public Employee spouseName(String spouseName) {
+        this.spouseName = spouseName;
+        return this;
+    }
+
+    public Employee spouseIdNumber(String spouseIdNumber) {
+        this.spouseIdNumber = spouseIdNumber;
+        return this;
+    }
 	
 	public void setMonthlySalary(int grade) {	
 		if (grade == 1) {
