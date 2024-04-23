@@ -1,8 +1,13 @@
 package lib;
 
+
+
 public class TaxFunction {
-	public static int calculateTax(int monthlySalary, int otherMonthlyIncome, int numberOfMonthWorking, int deductible, boolean isMarried, int numberOfChildren) {
-		
+	
+	public int calculateTax(int monthlySalary, int otherMonthlyIncome, int numberOfMonthWorking, int deductible, MaritalStatus maritalStatus, int numberOfChildren) {
+		public enum MaritalStatus {
+    		MARRIED, UNMARRIED
+		}	
 		int tax = 0;
 		
 		if (numberOfMonthWorking > 12) {
@@ -13,7 +18,7 @@ public class TaxFunction {
 			numberOfChildren = 3;
 		}
 		
-		if (isMarried) {
+		if (maritalStatus == MaritalStatus.MARRIED) {
 			tax = (int) Math.round(0.05 * (((monthlySalary + otherMonthlyIncome) * numberOfMonthWorking) - deductible - (54000000 + 4500000 + (numberOfChildren * 1500000))));
 		}else {
 			tax = (int) Math.round(0.05 * (((monthlySalary + otherMonthlyIncome) * numberOfMonthWorking) - deductible - 54000000));
