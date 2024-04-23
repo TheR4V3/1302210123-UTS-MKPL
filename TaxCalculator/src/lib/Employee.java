@@ -25,8 +25,10 @@ public class Employee {
 	private int otherMonthlyIncome;
 	private int annualDeductible;
 	
-	private String spouseName;
-	private String spouseIdNumber;
+	public class Spouse {
+		private String spouseName;
+		private String spouseIdNumber;
+	}
 
 	private List<String> childNames;
 	private List<String> childIdNumbers;
