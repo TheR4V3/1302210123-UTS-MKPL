@@ -13,17 +13,13 @@ public class Employee {
 	private String idNumber;
 	private String address;
 	
-	private int yearJoined;
-	private int monthJoined;
-	private int dayJoined;
+	private Date yearJoined;
 	private int monthWorkingInYear;
 	
 	private boolean isForeigner;
 	private boolean gender; 
 	
-	private int monthlySalary;
-	private int otherMonthlyIncome;
-	private int annualDeductible;
+	private Salary Salary;
 	
 	public class Spouse {
 		private String spouseName;
