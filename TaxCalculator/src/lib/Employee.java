@@ -26,8 +26,7 @@ public class Employee {
 		private String spouseIdNumber;
 	}
 
-	private List<String> childNames;
-	private List<String> childIdNumbers;
+	private List<Child> children;
 	
 	public Employee(String employeeId, String firstName, String lastName, String idNumber, String address, int yearJoined, int monthJoined, int dayJoined, boolean isForeigner, boolean gender) {
 		this.employeeId = employeeId;
@@ -41,8 +40,9 @@ public class Employee {
 		this.isForeigner = isForeigner;
 		this.gender = gender;
 		
-		childNames = new LinkedList<String>();
-		childIdNumbers = new LinkedList<String>();
+		salary = new Salary();
+		children = new LinkedList<>();
+		spouse = new Spouse();
 	}
 	
 	public void setMonthlySalary(int grade) {	
